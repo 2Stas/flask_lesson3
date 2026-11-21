@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Головна - Туристична агенція{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <section class="hero">
+        <h1>Відкрийте світ разом з нами!</h1>
+        <p>Найкращі подорожі, незабутні емоції та комфортний відпочинок у будь-палкій точці планети.</p>
+        <a href="{{ url_for('tours') }}" class="btn-primary">Переглянути тури</a>
+    </section>
+
+    <section class="about-agency-preview">
+        <h2>Про нашу агенцію</h2>
+        <p>Ми створюємо унікальні туристичні маршрути вже понад 10 років. Наша мета — зробити вашу подорож безпечною, яскравою та сповненою приємних вражень.</p>
+    </section>
+</main>
+{% endblock %}

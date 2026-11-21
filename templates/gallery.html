@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Галерея - Туристична агенція{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <h2>Галерея подорожей</h2>
+    <p>Надихніться краєвидами з наших попередніх турів.</p>
+
+    <div class="gallery-grid">
+        {% for image in images %}
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/' + image.image_url) }}" alt="{{ image.description }}"
+                class="gallery-img">
+            <p>{{ image.description }}</p>
+        </div>
+        {% endfor %}
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="Збільшене фото">
+        </div>
+    </div>
+</main>
+{% endblock %}
